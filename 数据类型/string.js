@@ -21,3 +21,15 @@ console.log('lastIndexOf:', str2.lastIndexOf('as')) // 找不到为-1 indexOf同
 console.log('includes:', str2.includes(str1))  // 查找str2中是否包含str1 返回布尔值
 console.log('slice:', str2.slice(1, 2)) // 截取 下标1-2字符
 console.log('slice:', str2.slice(-3)) // 截取 str.length-3-结束位置字符
+console.log('substr:', 'fooBar'.substr(-4, 2)) // 截取 支持负数 [index:开始位置,length:截取长度]
+console.log('substring:', 'foo0Bar'.substring(1, -1)) // 截取 不支持负数 [start:开始位置,stop:停止位置]，如果开始位置为负数则从0开始 不要使用负数，否则会乱
+console.log('trim:', '   a a   '.trim()) // 去除两边空格
+console.log('trimRight:', '   a a   '.trimRight()) // 去除右边空格
+console.log('trimLeft:', '   a a   '.trimLeft()) // 去除左边空格
+console.log('toLowerCase:', 'ABCDd'.toLowerCase()) // 转小写 toLocalLowerCase()
+console.log('toUpperCase:', 'abcde'.toUpperCase()) // 转大写 toLocalUpperCase()
+
+let replaceStr = 'alibabaali';
+console.log('replace:', replaceStr.replace(/ali/g, 'ALI')); // 匹配符合正则表达式的替换
+console.log('match',replaceStr.match(/a/g)) // 返回匹配到的字符
+console.log("Hello world!".match("world") )
