@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // "use strict";
+    var person = {
+      // sex: '男'
+    };
+    // writeable false 禁止修改属性
+    Object.defineProperty(person, "name", {
+      writable: false,
+      value: "Nicholas"
+    });
+    console.log(person.name); //"Nicholas" 
+    person.name = "Greg";
+    console.log(person.name); //"Nicholas"
+
+    // configurable false 禁止删除属性
+    Object.defineProperty(person, "age", {
+      configurable: false,
+      value: '18'
+    })
+    delete person.age
+    console.log(person)
+
+
+  </script>
+</body>
+
+</html>
